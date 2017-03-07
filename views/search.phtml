@@ -5,21 +5,21 @@
 			<div class="form-group">
 				<label class="col-md-1 control-label" for="isbn">ISBN</label>
 				<div class="col-md-2">
-					<input type="text" class="form-control" id="isbn" placeholder="ISBN" name="isbn">
+					<input type="text" class="form-control" id="isbn" placeholder="ISBN" name="isbn" value="<?=$isbn?>">
 				</div>
 				<label class="col-md-1 control-label">Price</label>
 				<div class="col-md-1">
-					<input type="number" class="form-control" placeholder="Price Min" name="price_min">
+					<input type="number" class="form-control" placeholder="Price Min" name="price_min" value="<?=$price_min?>">
 				</div>
 				<div class="col-md-1">
-					<input type="number" class="form-control" placeholder="Price Max" name="price_max">
+					<input type="number" class="form-control" placeholder="Price Max" name="price_max" value="<?=$price_max?>">
 				</div>
 				<label class="col-md-1 control-label">Year</label>
 				<div class="col-md-1">
-					<input type="number" min="1980" max="2017" class="form-control" placeholder="Year Start" name="year_min">
+					<input type="number" min="1980" max="2017" class="form-control" placeholder="Year Start" name="year_min" value="<?=$year_min?>">
 				</div>
 				<div class="col-md-1">
-					<input type="number" min="1980" max="2017" class="form-control" placeholder="Year End" name="year_max">
+					<input type="number" min="1980" max="2017" class="form-control" placeholder="Year End" name="year_max" value="<?=$year_max?>">
 				</div>
 				<label class="col-md-1 control-label" for="gender">Gender</label>
 				<div class="col-md-2">
@@ -34,25 +34,54 @@
 			<div class="form-group">
 				<label class="col-md-1 control-label" for="name">Name</label>
 				<div class="col-md-2">
-					<input type="text" class="form-control" id="name" placeholder="Name" name="name">
+					<input type="text" class="form-control" id="name" placeholder="Name" name="name" value="<?=$name?>">
 				</div>
 				<label class="col-md-1 control-label" for="author">Author</label>
 				<div class="col-md-2">
-					<input type="text" class="form-control" id="author" placeholder="Author" name="author">
+					<input type="text" class="form-control" id="author" placeholder="Author" name="author" value="<?=$author?>">
 				</div>
 				<label class="col-md-1 control-label" for="country">Country</label>
 				<div class="col-md-2">
-					<input type="text" class="form-control" id="country" placeholder="Country" name="country">
+					<input type="text" class="form-control" id="country" placeholder="Country" name="country" value="<?=$country?>">
 				</div>
 				<label class="col-md-1 control-label" for="editorial">Editorial</label>
 				<div class="col-md-2">
-					<input type="text" class="form-control" id="editorial" placeholder="Editorial" name="editorial">
+					<input type="text" class="form-control" id="editorial" placeholder="Editorial" name="editorial" value="<?=$editorial?>">
 				</div>
 			</div>
 			<button type="submit" class="btn btn-primary btn-lg pull-right">Recherche &raquo;</button>
 		</form>
 	</div>
 </div>
-<div class="container">
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-1">
+			Id
+		</div>
+		<div class="col-md-2">
+			Name
+		</div>
+		<div class="col-md-1">
+			Author
+		</div>
+		<div class="col-md-1">
+			Country
+		</div>
+		<div class="col-md-1">
+			Gender
+		</div>
+		<div class="col-md-1">
+			Year
+		</div>
+		<div class="col-md-2">
+			Editorial
+		</div>
+		<div class="col-md-2">
+			ISBN
+		</div>
+		<div class="col-md-1">
+			Price
+		</div>
+	</div>
 	<?php require('apps/search_elem.php'); ?>
 </div>

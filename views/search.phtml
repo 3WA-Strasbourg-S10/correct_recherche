@@ -1,0 +1,58 @@
+<div class="jumbotron">
+	<div class="container-fluid">
+		<h1>Rechercher un livre</h1>
+		<form class="form-horizontal">
+			<div class="form-group">
+				<label class="col-md-1 control-label" for="isbn">ISBN</label>
+				<div class="col-md-2">
+					<input type="text" class="form-control" id="isbn" placeholder="ISBN" name="isbn">
+				</div>
+				<label class="col-md-1 control-label">Price</label>
+				<div class="col-md-1">
+					<input type="number" class="form-control" placeholder="Price Min" name="price_min">
+				</div>
+				<div class="col-md-1">
+					<input type="number" class="form-control" placeholder="Price Max" name="price_max">
+				</div>
+				<label class="col-md-1 control-label">Year</label>
+				<div class="col-md-1">
+					<input type="number" min="1980" max="2017" class="form-control" placeholder="Year Start" name="year_min">
+				</div>
+				<div class="col-md-1">
+					<input type="number" min="1980" max="2017" class="form-control" placeholder="Year End" name="year_max">
+				</div>
+				<label class="col-md-1 control-label" for="gender">Gender</label>
+				<div class="col-md-2">
+					<select name="gender" class="form-control">
+						<option value="">Select a gender</option>
+						<?php foreach ($genders AS $gender) : ?>
+							<option><?=$gender?></option>
+						<?php endforeach; ?>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-md-1 control-label" for="name">Name</label>
+				<div class="col-md-2">
+					<input type="text" class="form-control" id="name" placeholder="Name" name="name">
+				</div>
+				<label class="col-md-1 control-label" for="author">Author</label>
+				<div class="col-md-2">
+					<input type="text" class="form-control" id="author" placeholder="Author" name="author">
+				</div>
+				<label class="col-md-1 control-label" for="country">Country</label>
+				<div class="col-md-2">
+					<input type="text" class="form-control" id="country" placeholder="Country" name="country">
+				</div>
+				<label class="col-md-1 control-label" for="editorial">Editorial</label>
+				<div class="col-md-2">
+					<input type="text" class="form-control" id="editorial" placeholder="Editorial" name="editorial">
+				</div>
+			</div>
+			<button type="submit" class="btn btn-primary btn-lg pull-right">Recherche &raquo;</button>
+		</form>
+	</div>
+</div>
+<div class="container">
+	<?php require('apps/search_elem.php'); ?>
+</div>

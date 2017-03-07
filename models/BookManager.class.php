@@ -61,7 +61,7 @@ class BookManager
 			$editorial = mysqli_real_escape_string($this->db, $editorial);
 			$request .= " AND editorial LIKE '%".$editorial."%' ";
 		}
-		$request .= " ORDER BY name DESC";
+		$request .= " ORDER BY name ASC LIMIT 50";
 		$list = [];
 		$res = mysqli_query($this->db, $request);
 		while ($book = mysqli_fetch_object($res, "Book", [$this->db]))
